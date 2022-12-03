@@ -1,0 +1,102 @@
+ninja: Entering directory `C:\Users\salva\StudioProjects\NeonIntrinsics-Android\app\.cxx\cmake\debug\x86'
+[1/2] Building CXX object CMakeFiles/native-lib.dir/native-lib.cpp.o
+FAILED: CMakeFiles/native-lib.dir/native-lib.cpp.o 
+C:\Users\salva\AppData\Local\Android\Sdk\ndk\23.0.7196353\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=i686-none-linux-android19 --gcc-toolchain=C:/Users/salva/AppData/Local/Android/Sdk/ndk/23.0.7196353/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/salva/AppData/Local/Android/Sdk/ndk/23.0.7196353/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -DANDROID_ARM_NEON=ON -mfloat-abi=hard -O0 -fno-limit-debug-info  -fPIC -MD -MT CMakeFiles/native-lib.dir/native-lib.cpp.o -MF CMakeFiles\native-lib.dir\native-lib.cpp.o.d -o CMakeFiles/native-lib.dir/native-lib.cpp.o -c C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp
+clang++: warning: argument unused during compilation: '-mfloat-abi=hard' [-Wunused-command-line-argument]
+In file included from C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:3:
+C:\Users\salva\AppData\Local\Android\Sdk\ndk\23.0.7196353\toolchains\llvm\prebuilt\windows-x86_64\lib64\clang\11.0.5\include\arm_neon.h:28:2: error: "NEON intrinsics not available with the soft-float ABI. Please use -mfloat-abi=softfp or -mfloat-abi=hard"
+#error "NEON intrinsics not available with the soft-float ABI. Please use -mfloat-abi=softfp or -mfloat-abi=hard"
+ ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:30:5: error: unknown type name 'uint8x8_t'; did you mean 'uint8_t'?
+    uint8x8_t kernel = {1,2,1,2,4,2,1,2};
+    ^~~~~~~~~
+    uint8_t
+C:/Users/salva/AppData/Local/Android/Sdk/ndk/23.0.7196353/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\stdint.h:59:23: note: 'uint8_t' declared here
+typedef __uint8_t     uint8_t;
+                      ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:30:15: error: excess elements in scalar initializer
+    uint8x8_t kernel = {1,2,1,2,4,2,1,2};
+              ^          ~~~~~~~~~~~~~~~
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:44:13: error: unknown type name 'uint8x8_t'; did you mean 'uint8_t'?
+            uint8x8_t pixel = vld1_u8((const unsigned char*)&data);
+            ^~~~~~~~~
+            uint8_t
+C:/Users/salva/AppData/Local/Android/Sdk/ndk/23.0.7196353/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\stdint.h:59:23: note: 'uint8_t' declared here
+typedef __uint8_t     uint8_t;
+                      ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:44:31: error: use of undeclared identifier 'vld1_u8'
+            uint8x8_t pixel = vld1_u8((const unsigned char*)&data);
+                              ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:46:13: error: unknown type name 'uint8x8_t'; did you mean 'uint8_t'?
+            uint8x8_t result = vmul_u8(kernel,pixel);
+            ^~~~~~~~~
+            uint8_t
+C:/Users/salva/AppData/Local/Android/Sdk/ndk/23.0.7196353/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\stdint.h:59:23: note: 'uint8_t' declared here
+typedef __uint8_t     uint8_t;
+                      ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:46:32: error: use of undeclared identifier 'vmul_u8'
+            uint8x8_t result = vmul_u8(kernel,pixel);
+                               ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:49:30: error: subscripted value is not an array, pointer, or vector
+                sum += result[k];
+                       ~~~~~~^~
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:75:5: error: unknown type name 'int32x4_t'; did you mean 'int32_t'?
+    int32x4_t partialSumsNeon = vdupq_n_s32(0);
+    ^~~~~~~~~
+    int32_t
+C:/Users/salva/AppData/Local/Android/Sdk/ndk/23.0.7196353/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\stdint.h:64:23: note: 'int32_t' declared here
+typedef __int32_t     int32_t;
+                      ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:75:33: error: use of undeclared identifier 'vdupq_n_s32'
+    int32x4_t partialSumsNeon = vdupq_n_s32(0);
+                                ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:76:5: error: unknown type name 'int32x4_t'; did you mean 'int32_t'?
+    int32x4_t sum1 = vdupq_n_s32(0);
+    ^~~~~~~~~
+    int32_t
+C:/Users/salva/AppData/Local/Android/Sdk/ndk/23.0.7196353/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\stdint.h:64:23: note: 'int32_t' declared here
+typedef __int32_t     int32_t;
+                      ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:76:22: error: use of undeclared identifier 'vdupq_n_s32'
+    int32x4_t sum1 = vdupq_n_s32(0);
+                     ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:77:5: error: unknown type name 'int32x4_t'; did you mean 'int32_t'?
+    int32x4_t sum2 = vdupq_n_s32(0);
+    ^~~~~~~~~
+    int32_t
+C:/Users/salva/AppData/Local/Android/Sdk/ndk/23.0.7196353/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\stdint.h:64:23: note: 'int32_t' declared here
+typedef __int32_t     int32_t;
+                      ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:77:22: error: use of undeclared identifier 'vdupq_n_s32'
+    int32x4_t sum2 = vdupq_n_s32(0);
+                     ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:78:5: error: unknown type name 'int32x4_t'; did you mean 'int32_t'?
+    int32x4_t sum3 = vdupq_n_s32(0);
+    ^~~~~~~~~
+    int32_t
+C:/Users/salva/AppData/Local/Android/Sdk/ndk/23.0.7196353/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\stdint.h:64:23: note: 'int32_t' declared here
+typedef __int32_t     int32_t;
+                      ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:78:22: error: use of undeclared identifier 'vdupq_n_s32'
+    int32x4_t sum3 = vdupq_n_s32(0);
+                     ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:79:5: error: unknown type name 'int32x4_t'; did you mean 'int32_t'?
+    int32x4_t sum4 = vdupq_n_s32(0);
+    ^~~~~~~~~
+    int32_t
+C:/Users/salva/AppData/Local/Android/Sdk/ndk/23.0.7196353/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\stdint.h:64:23: note: 'int32_t' declared here
+typedef __int32_t     int32_t;
+                      ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:79:22: error: use of undeclared identifier 'vdupq_n_s32'
+    int32x4_t sum4 = vdupq_n_s32(0);
+                     ^
+C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/src/main/cpp/native-lib.cpp:90:9: error: unknown type name 'int16x8_t'; did you mean 'int16_t'?
+        int16x8_t v11 = vld1q_s16(vector1);
+        ^~~~~~~~~
+        int16_t
+C:/Users/salva/AppData/Local/Android/Sdk/ndk/23.0.7196353/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include\stdint.h:61:23: note: 'int16_t' declared here
+typedef __int16_t     int16_t;
+                      ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+ninja: build stopped: subcommand failed.

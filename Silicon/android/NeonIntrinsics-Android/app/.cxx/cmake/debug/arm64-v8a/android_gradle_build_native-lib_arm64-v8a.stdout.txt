@@ -1,0 +1,4 @@
+ninja: Entering directory `C:\Users\salva\StudioProjects\NeonIntrinsics-Android\app\.cxx\cmake\debug\arm64-v8a'
+[1/2] Building CXX object CMakeFiles/native-lib.dir/native-lib.cpp.o
+clang++: warning: argument unused during compilation: '-mfloat-abi=hard' [-Wunused-command-line-argument]
+[2/2] Linking CXX shared library C:\Users\salva\StudioProjects\NeonIntrinsics-Android\app\build\intermediates\cmake\debug\obj\arm64-v8a\libnative-lib.so

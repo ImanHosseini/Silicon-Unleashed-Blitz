@@ -1,0 +1,9 @@
+# ninja log v5
+0	469	641215319	CMakeFiles/native-lib.dir/native-lib.cpp.o	7383bf04fd753e2f
+471	573	641215319	C:/Users/salva/StudioProjects/NeonIntrinsics-Android/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	ceaf25cce80c9f9
+0	8	0	clean	20dd9c3cc39485fc
+0	8	0	clean	20dd9c3cc39485fc
+0	7	0	clean	20dd9c3cc39485fc
+0	8	0	clean	20dd9c3cc39485fc
+1	285	642667689	build.ninja	e473ce7f66aa866d
+0	7	0	clean	20dd9c3cc39485fc

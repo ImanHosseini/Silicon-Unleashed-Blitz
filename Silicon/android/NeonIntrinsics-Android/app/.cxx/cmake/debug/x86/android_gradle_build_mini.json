@@ -1,0 +1,22 @@
+{
+  "buildFiles": [
+    "C:\\Users\\salva\\StudioProjects\\NeonIntrinsics-Android\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "C:\\Users\\salva\\AppData\\Local\\Android\\Sdk\\ndk\\23.0.7196353\\build\\cmake\\android.toolchain.cmake",
+    "C:\\Users\\salva\\AppData\\Local\\Android\\Sdk\\ndk\\23.0.7196353\\build\\cmake\\android-legacy.toolchain.cmake",
+    "C:\\Users\\salva\\AppData\\Local\\Android\\Sdk\\ndk\\23.0.7196353\\build\\cmake\\platforms.cmake",
+    "C:\\Users\\salva\\AppData\\Local\\Android\\Sdk\\ndk\\23.0.7196353\\build\\cmake\\compiler_id.cmake"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\salva\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Users\\salva\\StudioProjects\\NeonIntrinsics-Android\\app\\.cxx\\cmake\\debug\\x86\" clean"
+  ],
+  "buildTargetsCommand": "C:\\Users\\salva\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"C:\\Users\\salva\\StudioProjects\\NeonIntrinsics-Android\\app\\.cxx\\cmake\\debug\\x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "native-lib-Debug-x86": {
+      "artifactName": "native-lib",
+      "buildCommand": "C:\\Users\\salva\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Users\\salva\\StudioProjects\\NeonIntrinsics-Android\\app\\.cxx\\cmake\\debug\\x86\" native-lib",
+      "abi": "x86",
+      "output": "C:\\Users\\salva\\StudioProjects\\NeonIntrinsics-Android\\app\\build\\intermediates\\cmake\\debug\\obj\\x86\\libnative-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}
